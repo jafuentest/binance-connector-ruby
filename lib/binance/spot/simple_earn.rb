@@ -15,9 +15,25 @@ module Binance
       # @option kwargs [Integer] :current Current query page. Default: 1, Min: 1
       # @option kwargs [Integer] :size Default: 10, Max: 100
       # @option kwargs [Integer] :recvWindow The value cannot be greater than 60000
-      # @see https://binance-docs.github.io/apidocs/spot/en/#lending-account-user_data
+      # @see https://binance-docs.github.io/apidocs/spot/en/#get-flexible-product-position-user_data
       def simple_earn_flexible_position(**kwargs)
         @session.sign_request(:get, '/sapi/v1/simple-earn/flexible/position', params: kwargs)
+      end
+
+      # Get Locked Product Position (USER_DATA)
+      #
+      #   GET /sapi/v1/simple-earn/locked/position
+      #
+      # @param kwargs [Hash]
+      # @option kwargs [String] :asset
+      # @option kwargs [String] :positionId
+      # @option kwargs [String] :projectId
+      # @option kwargs [Integer] :current Current query page. Default: 1, Min: 1
+      # @option kwargs [Integer] :size Default: 10, Max: 100
+      # @option kwargs [Integer] :recvWindow The value cannot be greater than 60000
+      # @see https://binance-docs.github.io/apidocs/spot/en/#get-locked-product-position-user_data
+      def simple_earn_locked_position(**kwargs)
+        @session.sign_request(:get, '/sapi/v1/simple-earn/locked/position', params: kwargs)
       end
     end
   end
