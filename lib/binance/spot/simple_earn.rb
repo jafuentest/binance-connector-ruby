@@ -4,7 +4,7 @@ module Binance
   class Spot
     # all savings endpoints
     # @see https://binance-docs.github.io/apidocs/spot/en/#simple-earn-endpoints
-    module SimpleEarn::Flexible
+    module SimpleEarn
       # Get Flexible Product Position (USER_DATA)
       #
       #  GET /sapi/v1/simple-earn/flexible/position
