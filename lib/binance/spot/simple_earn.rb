@@ -17,7 +17,7 @@ module Binance
       # @option kwargs [Integer] :recvWindow The value cannot be greater than 60000
       # @see https://binance-docs.github.io/apidocs/spot/en/#lending-account-user_data
       def simple_earn_flexible_position(**kwargs)
-        @session.sign_request(:get, '/sapi/v1/lending/union/account', params: kwargs)
+        @session.sign_request(:get, '/sapi/v1/simple-earn/flexible/position', params: kwargs)
       end
     end
   end
