@@ -7,6 +7,7 @@ require 'binance/utils/url'
 require 'binance/error'
 require 'binance/spot/c2c'
 require 'binance/spot/convert'
+require 'binance/spot/dci'
 require 'binance/spot/fiat'
 require 'binance/spot/loan'
 require 'binance/spot/margin'
@@ -39,6 +40,7 @@ module Binance
   class Spot
     include Binance::Spot::C2C
     include Binance::Spot::Convert
+    include Binance::Spot::DCI
     include Binance::Spot::Fiat
     include Binance::Spot::Loan
     include Binance::Spot::Margin
