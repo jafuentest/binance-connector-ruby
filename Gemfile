@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gemspec
 
+gem 'base64'
 gem 'faraday'
 gem 'websocket-eventmachine-client'
 
